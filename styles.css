@@ -1,0 +1,128 @@
+/* Genel Stiller */
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+/* CV Kartı */
+.cv-container {
+  max-width: 800px;
+  margin: 30px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+h1 {
+  color: #333;
+  margin: 5px 0;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0073e6;
+}
+
+.contact-info,
+.social-links {
+  margin: 10px 0;
+}
+
+.contact-info a,
+.social-links a {
+  color: #0073e6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.about {
+  font-style: italic;
+  color: #555;
+  padding: 10px;
+  border-left: 4px solid #0073e6;
+  margin-top: 15px;
+}
+
+/* Bölümler */
+.section {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.section h2 {
+  border-bottom: 2px solid #0073e6;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.item {
+  margin-bottom: 15px;
+}
+
+.date {
+  color: #888;
+  font-size: 14px;
+}
+
+/* Beceriler */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  display: inline-block;
+  background: #0073e6;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+/* Form Stili */
+.form-container {
+  max-width: 800px;
+  margin: 30px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  background: #0073e6;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #005bb5;
+}
