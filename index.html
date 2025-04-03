@@ -9,57 +9,61 @@
   <body>
     <div class="cv-container">
       <header>
-        <img src="profile.jpg" alt="Profil Fotoğrafı" class="profile-pic" />
-        <h1 id="cvName">[Ad Soyad]</h1>
-        <p class="title" id="cvTitle">[Meslek]</p>
+        <!-- Profil Fotoğrafı -->
+        <label for="profilePicInput">
+          <img
+            src="profile.jpg"
+            alt="Profil Resmi"
+            id="profile-pic"
+            class="profile-pic"
+          />
+        </label>
+        <input
+          type="file"
+          id="profilePicInput"
+          accept="image/*"
+          style="display: none"
+        />
+
+        <h1 contenteditable="true" id="cvName">[Ad Soyad]</h1>
+        <p class="title" contenteditable="true" id="cvTitle">[Meslek]</p>
         <div class="contact-info">
-          ✉️ <a href="#" id="cvEmail">[E-Posta]</a> | 📞
-          <span id="cvPhone">[Telefon]</span>
+          ✉️ <a href="#" contenteditable="true" id="cvEmail">[E-Posta]</a> | 📞
+          <span contenteditable="true" id="cvPhone">[Telefon]</span>
         </div>
         <div class="social-links">
-          🔗 <a href="#" id="cvLinkedin">LinkedIn</a> | 💻
-          <a href="#" id="cvGithub">GitHub</a>
+          🔗 <a href="#" contenteditable="true" id="cvLinkedin">[LinkedIn]</a> |
+          💻 <a href="#" contenteditable="true" id="cvGithub">[GitHub]</a>
         </div>
-        <p id="cvAbout" class="about">[Kendinizi Tanıtın]</p>
+        <p id="cvAbout" class="about" contenteditable="true">
+          [Kendinizi Tanıtın]
+        </p>
       </header>
 
       <section class="section">
         <h2>İş Deneyimi</h2>
         <div class="item">
-          <h3 id="cvJob1Title">[Pozisyon]</h3>
-          <p class="date" id="cvJob1Date">[Tarih]</p>
-          <p id="cvJob1Desc">[İş Tanımı]</p>
+          <h3 contenteditable="true" id="cvJob1Title">[Pozisyon]</h3>
+          <p class="date" contenteditable="true" id="cvJob1Date">[Tarih]</p>
+          <p contenteditable="true" id="cvJob1Desc">[İş Tanımı]</p>
         </div>
       </section>
 
       <section class="section">
         <h2>Eğitim</h2>
         <div class="item">
-          <h3 id="cvEdu1Title">[Üniversite]</h3>
-          <p class="date" id="cvEdu1Date">[Tarih]</p>
-          <p id="cvEdu1Desc">[Açıklama]</p>
+          <h3 contenteditable="true" id="cvEdu1Title">[Üniversite]</h3>
+          <p class="date" contenteditable="true" id="cvEdu1Date">[Tarih]</p>
+          <p contenteditable="true" id="cvEdu1Desc">[Açıklama]</p>
         </div>
       </section>
 
       <section class="section">
         <h2>Beceriler</h2>
         <ul id="cvSkills">
-          <li>[Beceri]</li>
+          <li contenteditable="true">[Beceri]</li>
         </ul>
       </section>
-    </div>
-
-    <!-- Form -->
-    <div class="form-container">
-      <h2>Bilgilerinizi Girin</h2>
-      <label>Ad Soyad:</label> <input type="text" id="input-name" />
-      <label>Meslek:</label> <input type="text" id="input-title" />
-      <label>E-Posta:</label> <input type="email" id="input-email" />
-      <label>Telefon:</label> <input type="tel" id="input-phone" />
-      <label>LinkedIn:</label> <input type="url" id="input-linkedin" />
-      <label>GitHub:</label> <input type="url" id="input-github" />
-      <label>Kendiniz Hakkında:</label> <textarea id="input-about"></textarea>
-      <button id="updateCv">Güncelle</button>
     </div>
 
     <script src="script.js"></script>

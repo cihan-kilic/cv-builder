@@ -22,37 +22,36 @@ body {
   height: 120px;
   border-radius: 50%;
   margin-bottom: 15px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-h1 {
-  color: #333;
+.profile-pic:hover {
+  opacity: 0.8;
+}
+
+h1,
+p {
   margin: 5px 0;
 }
 
-.title {
-  font-size: 20px;
-  font-weight: 600;
-  color: #0073e6;
+h1[contenteditable="true"],
+p[contenteditable="true"],
+a[contenteditable="true"],
+span[contenteditable="true"],
+li[contenteditable="true"] {
+  border-bottom: 1px dashed #0073e6;
+  cursor: text;
+  transition: 0.3s;
 }
 
-.contact-info,
-.social-links {
-  margin: 10px 0;
-}
-
-.contact-info a,
-.social-links a {
-  color: #0073e6;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.about {
-  font-style: italic;
-  color: #555;
-  padding: 10px;
-  border-left: 4px solid #0073e6;
-  margin-top: 15px;
+h1[contenteditable="true"]:focus,
+p[contenteditable="true"]:focus,
+a[contenteditable="true"]:focus,
+span[contenteditable="true"]:focus,
+li[contenteditable="true"]:focus {
+  background: #f0f8ff;
+  outline: none;
 }
 
 /* Bölümler */
@@ -91,38 +90,7 @@ ul li {
   margin: 5px;
 }
 
-/* Form Stili */
-.form-container {
-  max-width: 800px;
-  margin: 30px auto;
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-}
-
-.form-container input,
-.form-container textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  font-size: 16px;
-}
-
-button {
-  width: 100%;
-  background: #0073e6;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover {
+/* Hover Animasyonları */
+ul li:hover {
   background: #005bb5;
 }

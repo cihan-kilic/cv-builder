@@ -1,15 +1,39 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const updateButton = document.getElementById("updateCv");
+    const profilePicInput = document.getElementById("profilePicInput");
+    const profilePic = document.getElementById("profile-pic");
 
-    function updateCV() {
-        document.getElementById("cvName").innerText = document.getElementById("input-name").value || "[Ad Soyad]";
-        document.getElementById("cvTitle").innerText = document.getElementById("input-title").value || "[Meslek]";
-        document.getElementById("cvEmail").innerText = document.getElementById("input-email").value || "[E-Posta]";
-        document.getElementById("cvPhone").innerText = document.getElementById("input-phone").value || "[Telefon]";
-        document.getElementById("cvLinkedin").href = document.getElementById("input-linkedin").value || "#";
-        document.getElementById("cvGithub").href = document.getElementById("input-github").value || "#";
-        document.getElementById("cvAbout").innerText = document.getElementById("input-about").value || "[Kendinizi Tanıtın]";
-    }
+    // Profil fotoğrafını değiştirme
+    profilePicInput.addEventListener("change", function (event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                profilePic.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+    });
 
-    updateButton.addEventListener("click", updateCV);
+    // Profil resmine tıklayınca dosya seçme
+    profilePic.addEventListener("click", function () {
+        profilePicInput.click();
+    });
+
+    // LocalStorage ile bilgileri kaydetme
+    const editableElements = document.querySelectorAll("[contenteditable='true']");
+    
+    // Verileri kaydetme
+    editableElements.forEach(element => {
+        element.addEventListener("input", function () {
+            localStorage.setItem(element.id, element.innerText);
+        });
+    });
+
+    // Sayfa açıldığında bilgileri geri yükleme
+    editableElements.forEach(element => {
+        const savedData = localStorage.getItem(element.id);
+        if (savedData) {
+            element.innerText = savedData;
+        }
+    });
 });
