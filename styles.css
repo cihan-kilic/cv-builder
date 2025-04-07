@@ -1,96 +1,97 @@
-/* Genel Stiller */
-body {
-  font-family: "Poppins", sans-serif;
-  background: #f9f9f9;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-/* CV Kartı */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
 .cv-container {
-  max-width: 800px;
-  margin: 30px auto;
-  background: white;
-  padding: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 30px 40px;
   border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+header {
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .profile-pic {
   width: 120px;
   height: 120px;
   border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #0077cc;
   margin-bottom: 15px;
   cursor: pointer;
-  transition: 0.3s;
 }
 
-.profile-pic:hover {
-  opacity: 0.8;
+h1 {
+  font-size: 2em;
+  color: #0077cc;
 }
 
-h1,
-p {
+.title {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.contact-info,
+.social-links {
+  font-size: 0.95em;
+  color: #555;
   margin: 5px 0;
 }
 
-h1[contenteditable="true"],
-p[contenteditable="true"],
-a[contenteditable="true"],
-span[contenteditable="true"],
-li[contenteditable="true"] {
-  border-bottom: 1px dashed #0073e6;
-  cursor: text;
-  transition: 0.3s;
+.contact-info a,
+.social-links a {
+  color: #0077cc;
+  text-decoration: none;
 }
 
-h1[contenteditable="true"]:focus,
-p[contenteditable="true"]:focus,
-a[contenteditable="true"]:focus,
-span[contenteditable="true"]:focus,
-li[contenteditable="true"]:focus {
-  background: #f0f8ff;
-  outline: none;
-}
-
-/* Bölümler */
 .section {
-  margin-top: 20px;
-  text-align: left;
+  margin-bottom: 30px;
 }
 
 .section h2 {
-  border-bottom: 2px solid #0073e6;
+  border-bottom: 2px solid #0077cc;
   padding-bottom: 5px;
   margin-bottom: 15px;
+  color: #0077cc;
 }
 
 .item {
   margin-bottom: 15px;
 }
 
-.date {
-  color: #888;
-  font-size: 14px;
+.item h3 {
+  font-size: 1.1em;
+  color: #222;
+  margin-bottom: 5px;
 }
 
-/* Beceriler */
+.item p.date {
+  font-size: 0.9em;
+  color: #888;
+  margin-bottom: 5px;
+}
+
 ul {
-  list-style: none;
-  padding: 0;
+  list-style-type: disc;
+  padding-left: 20px;
 }
 
 ul li {
-  display: inline-block;
-  background: #0073e6;
-  color: white;
-  padding: 8px 12px;
-  border-radius: 5px;
-  margin: 5px;
-}
-
-/* Hover Animasyonları */
-ul li:hover {
-  background: #005bb5;
+  margin-bottom: 5px;
 }

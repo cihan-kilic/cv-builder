@@ -1,39 +1,24 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const profilePicInput = document.getElementById("profilePicInput");
-    const profilePic = document.getElementById("profile-pic");
-
-    // Profil fotoğrafını değiştirme
-    profilePicInput.addEventListener("change", function (event) {
-        const file = event.target.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = function (e) {
-                profilePic.src = e.target.result;
-            };
-            reader.readAsDataURL(file);
-        }
+// Profil resmi yükleme
+document.getElementById('profilePicInput').addEventListener('change', function () {
+    const file = this.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        document.getElementById('profile-pic').src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+  
+  // Tüm contenteditable alanlara odaklandığında stil ekleme
+  document.querySelectorAll('[contenteditable="true"]').forEach(element => {
+    element.addEventListener('focus', () => {
+      element.style.outline = '2px solid #0077cc';
+      element.style.backgroundColor = '#f0f8ff';
     });
-
-    // Profil resmine tıklayınca dosya seçme
-    profilePic.addEventListener("click", function () {
-        profilePicInput.click();
+    element.addEventListener('blur', () => {
+      element.style.outline = 'none';
+      element.style.backgroundColor = 'transparent';
     });
-
-    // LocalStorage ile bilgileri kaydetme
-    const editableElements = document.querySelectorAll("[contenteditable='true']");
-    
-    // Verileri kaydetme
-    editableElements.forEach(element => {
-        element.addEventListener("input", function () {
-            localStorage.setItem(element.id, element.innerText);
-        });
-    });
-
-    // Sayfa açıldığında bilgileri geri yükleme
-    editableElements.forEach(element => {
-        const savedData = localStorage.getItem(element.id);
-        if (savedData) {
-            element.innerText = savedData;
-        }
-    });
-});
+  });
+  

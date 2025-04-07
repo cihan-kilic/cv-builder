@@ -3,13 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profesyonel CV</title>
+    <title>John Doe | Junior Software Developer</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="cv-container">
       <header>
-        <!-- Profil Fotoğrafı -->
         <label for="profilePicInput">
           <img
             src="profile.jpg"
@@ -25,44 +24,125 @@
           style="display: none"
         />
 
-        <h1 contenteditable="true" id="cvName">[Ad Soyad]</h1>
-        <p class="title" contenteditable="true" id="cvTitle">[Meslek]</p>
+        <h1 contenteditable="true" id="cvName">John Doe</h1>
+        <p class="title" contenteditable="true" id="cvTitle">
+          Junior Software Developer
+        </p>
         <div class="contact-info">
-          ✉️ <a href="#" contenteditable="true" id="cvEmail">[E-Posta]</a> | 📞
-          <span contenteditable="true" id="cvPhone">[Telefon]</span>
+          ✉️
+          <a
+            href="mailto:john.doe@example.com"
+            contenteditable="true"
+            id="cvEmail"
+            >john.doe@example.com</a
+          >
+          | 📞 <span contenteditable="true" id="cvPhone">123-456-7890</span> |
+          📍 <span contenteditable="true" id="cvLocation">Anytown, USA</span>
         </div>
         <div class="social-links">
-          🔗 <a href="#" contenteditable="true" id="cvLinkedin">[LinkedIn]</a> |
-          💻 <a href="#" contenteditable="true" id="cvGithub">[GitHub]</a>
+          🔗
+          <a
+            href="https://linkedin.com/in/johndoe"
+            contenteditable="true"
+            id="cvLinkedin"
+            >linkedin.com/in/johndoe</a
+          >
+          | 💻
+          <a
+            href="https://github.com/johndoe"
+            contenteditable="true"
+            id="cvGithub"
+            >github.com/johndoe</a
+          >
         </div>
-        <p id="cvAbout" class="about" contenteditable="true">
-          [Kendinizi Tanıtın]
-        </p>
       </header>
 
       <section class="section">
         <h2>İş Deneyimi</h2>
         <div class="item">
-          <h3 contenteditable="true" id="cvJob1Title">[Pozisyon]</h3>
-          <p class="date" contenteditable="true" id="cvJob1Date">[Tarih]</p>
-          <p contenteditable="true" id="cvJob1Desc">[İş Tanımı]</p>
+          <h3 contenteditable="true">
+            Front-End Developer Assistant - Web Solutions Ltd.
+          </h3>
+          <p class="date" contenteditable="true">January 2023 - Present</p>
+          <p contenteditable="true">
+            Developing and maintaining responsive websites using HTML, CSS, and
+            JavaScript. Collaborating with designers to implement UI/UX designs.
+            Optimizing website performance.
+          </p>
+        </div>
+        <div class="item">
+          <h3 contenteditable="true">
+            Software Developer Intern - Tech Startup Inc.
+          </h3>
+          <p class="date" contenteditable="true">June 2022 - December 2022</p>
+          <p contenteditable="true">
+            Assisted senior developers in building web applications. Implemented
+            new features and resolved bugs. Participated in code reviews and
+            agile development processes.
+          </p>
         </div>
       </section>
 
       <section class="section">
         <h2>Eğitim</h2>
         <div class="item">
-          <h3 contenteditable="true" id="cvEdu1Title">[Üniversite]</h3>
-          <p class="date" contenteditable="true" id="cvEdu1Date">[Tarih]</p>
-          <p contenteditable="true" id="cvEdu1Desc">[Açıklama]</p>
+          <h3 contenteditable="true">University of Anytown</h3>
+          <p class="date" contenteditable="true">September 2018 - May 2022</p>
+          <p contenteditable="true">
+            Bachelor of Science in Computer Science. Relevant coursework
+            included data structures, algorithms, and software engineering.
+          </p>
         </div>
       </section>
 
       <section class="section">
-        <h2>Beceriler</h2>
+        <h2>Teknik Beceriler</h2>
         <ul id="cvSkills">
-          <li contenteditable="true">[Beceri]</li>
+          <li contenteditable="true">HTML</li>
+          <li contenteditable="true">CSS</li>
+          <li contenteditable="true">JavaScript</li>
+          <li contenteditable="true">React</li>
+          <li contenteditable="true">Node.js</li>
+          <li contenteditable="true">Git</li>
+          <li contenteditable="true">SQL</li>
         </ul>
+      </section>
+
+      <section class="section">
+        <h2>Soft Skills</h2>
+        <ul id="cvSoftSkills">
+          <li contenteditable="true">Problem-solving</li>
+          <li contenteditable="true">Teamwork</li>
+          <li contenteditable="true">Communication</li>
+          <li contenteditable="true">Time management</li>
+          <li contenteditable="true">Adaptability</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Projeler</h2>
+        <div class="item">
+          <h3 contenteditable="true">Personal Portfolio Website</h3>
+          <p contenteditable="true">
+            Developed a personal portfolio website to showcase projects and
+            skills using React.
+          </p>
+          <p class="date">Technologies: React, HTML, CSS, JavaScript</p>
+          <a href="https://github.com/johndoe/portfolio" target="_blank"
+            >github.com/johndoe/portfolio</a
+          >
+        </div>
+        <div class="item">
+          <h3 contenteditable="true">Task Management App</h3>
+          <p contenteditable="true">
+            Created a task management application using Node.js and SQL for
+            backend data storage.
+          </p>
+          <p class="date">Technologies: Node.js, SQL, JavaScript</p>
+          <a href="https://github.com/johndoe/task-app" target="_blank"
+            >github.com/johndoe/task-app</a
+          >
+        </div>
       </section>
     </div>
 
